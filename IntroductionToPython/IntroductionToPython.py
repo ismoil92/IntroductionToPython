@@ -58,33 +58,40 @@
 
 
 
-#text = input("Введите строку:")
-#i = 0
-#istrue = False
+text = input("Введите строку:")
+i = 0
+istrue = False
 
-#if text[i]>='0' and text[i]<='9':
-#    i+=1
+for j in text:
+    if j =='.':
+        istrue = True
+        break
 
-#    while text[i]>='0' and text[i]<='9':
-#        i+=1
-#    if text[i] == '.':
-#        i+=1
-#        while text[i]>='0' and text[i]<='9':
-#            i+=1
-#            if i == len(text):
-#                break
-#            if text[i].isalpha():
-#                istrue = False
-#                break
-#            istrue = True
+if istrue:
+    if text[i]>='0' and text[i]<='9':
+        i+=1
+        while text[i]>='0' and text[i]<='9':
+            i+=1
+        if text[i] == '.':
+            i+=1
+            while text[i]>='0' and text[i]<='9':
+                i+=1
+                if i == len(text):
+                    break
+                if text[i].isalpha():
+                    istrue = False
+                    break
+                istrue = True
 
-#else:
-#    print("Не является дробной числом")
+    else:
+        print("Не является дробной числом")
+else:
+    print("Не является дробной числом 2")
 
-#if istrue:
-#    print("Является дробной числом")
-#else:
-#    print("Не является дробной числом 2")
+
+if istrue:
+    print("Является дробной числом")
+
 
 
 #=====================================================================================
@@ -94,31 +101,31 @@
 # Необходимо развернуть подстроку между первой и последней буквой "о".
 # Если она только одна или её нет - то сообщить, что буква "о" -одна или не встречается
 
-text = input("Введите строку:")
-result = text.lower()
-newtext =""
-firstIndex =-1
-lastIndex = -1
-for i in range(len(result)):
-    if result[i] == 'o' or result[i] == 'о':
-        if firstIndex == -1:
-            firstIndex = i
-        else:
-            if lastIndex == -1:
-                lastIndex = i
-            else:
-                lastIndex = i
-    i+=1
+#text = input("Введите строку:")
+#result = text.lower()
+#newtext =""
+#firstIndex =-1
+#lastIndex = -1
+#for i in range(len(result)):
+#    if result[i] == 'o' or result[i] == 'о':
+#        if firstIndex == -1:
+#            firstIndex = i
+#        else:
+#            if lastIndex == -1:
+#                lastIndex = i
+#            else:
+#                lastIndex = i
+#    i+=1
 
 
-if firstIndex != -1 and lastIndex !=-1:
-    i = lastIndex-1
-    while i> firstIndex:
-        newtext+=result[i]
-        i-=1
-    print(newtext)
-else:
-    if firstIndex != -1:
-        print("В строке есть только одна буква о")
-    else:
-        print("В строке не одного буква о")
+#if firstIndex != -1 and lastIndex !=-1:
+#    i = lastIndex-1
+#    while i> firstIndex:
+#        newtext+=result[i]
+#        i-=1
+#    print(newtext)
+#else:
+#    if firstIndex != -1:
+#        print("В строке есть только одна буква о")
+#    else:
+#        print("В строке не одного буква о")
