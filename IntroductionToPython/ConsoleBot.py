@@ -45,7 +45,7 @@ def SelectTextFileAndReadLineAndPrint(weeks, number_day):
     else:
         print("Нет такого дни недели")
 
-
+# Функция для работы консольного бота. Входные параметры словарь weeks день недели
 def RunningBot(weeks):
     while True:
         print("\nВыберите команду для консольного бота. 1- записать. 2- перезаписать. 3- читать. 4-Выход:", end='')
